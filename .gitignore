@@ -125,5 +125,6 @@ cscope.out
 cscope.in.out
 cscope.po.out
 
-
 # End of https://www.gitignore.io/api/python,git,tags
+
+output.tsv
