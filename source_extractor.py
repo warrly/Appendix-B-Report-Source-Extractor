@@ -17,7 +17,7 @@ PATTERNS = [
     # Depositions (Deposition of Firstname (optional-Middle) Last, Month Day, Year)
     re.compile('Deposition of [A-Z][a-zA-Z]+(?: [A-Z][a-zA-Z]+){1,2}, [A-Z][a-z]+ \d{1,2}, \d{4}'),
     # Bates sources (EMAILS 12345678 or EMAILS12345678 or EMAILS 1234567 or EMAILS1234567)
-    re.compile('[A-Z]+\s?[0-9]{7,8}'),
+    re.compile('[A-Z]+(?:-[A-Z]+)\s?[0-9]{7,8}'),
     # websites
     re.compile('{}|{}'.format(website, formal_website)),
 ]
