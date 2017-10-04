@@ -20,9 +20,9 @@ Here you'll find code to automagically extract sources from reports.
 ## Footnotes to Extracted Sources
 Run via the following to have the sources printed out to the terminal.
 ```bash
-python3 source_extracter.py <input-file.txt>
+python3 source_extractor.py <input-file.txt>
 ```
 Run via the following to have the sources saved to `<output-file.tsv>`
 ```bash
-python3 source_extracter.py <input-file.txt> > <output-file.tsv>
+python3 source_extractor.py <input-file.txt> > <output-file.tsv>
 ```
