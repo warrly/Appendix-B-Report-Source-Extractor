@@ -6,3 +6,7 @@ Conversation with Firstname Lastname.
 Conversation with Firstname Middle Lastname; Deposition of Firstname Lastname, June 23, 2013, p. 12. See HELLO 12345678, some more text over here. See also EMAILS 12308487.
 CARRY 98723457.
 DOEJON 98723457.
+DOEJON98723457.
+DOEJON9872345.
+For the Fake XL product, see http://www.edwards.com/eu/Products/TranscatheterValves/Pages/novaflex.aspx and http://www.edwards.com/eu/Products/TranscatheterValves/Pages/ascendraplus.aspx. For the Fake 3 product, see http://www.edwards.com/eu/Products/TranscatheterValves/Pages/commander.aspx and http://www.edwards.com/eu/Products/TranscatheterValves/Pages/certitude.aspx.
+“Global Location,” Edwards Lifesciences, http://www.edwards.com/eu/sharedpages/pages/locations.aspx.

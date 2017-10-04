@@ -7,13 +7,19 @@ import fileinput
 import re
 
 
+website = '(?:http://)(?:www.)\S+\.com(?:/\S+[A-Za-z])'
+formal_website = f'(?:“.+,” .+, ){website}'
+
+
 PATTERNS = [
     # Conversations (Conversation with First (optional-Middle) Last)
     re.compile('Conversation with [A-Z][a-zA-Z]+(?: [A-Z][a-zA-Z]+){1,2}'),
     # Depositions (Deposition of Firstname (optional-Middle) Last, Month Day, Year)
     re.compile('Deposition of [A-Z][a-zA-Z]+(?: [A-Z][a-zA-Z]+){1,2}, [A-Z][a-z]+ \d{1,2}, \d{4}'),
-    # Bates sources (EMAILS 12345678)
-    re.compile('[A-Z]+ [0-9]{8}'),
+    # Bates sources (EMAILS 12345678 or EMAILS12345678 or EMAILS 1234567 or EMAILS1234567)
+    re.compile('[A-Z]+\s?[0-9]{7,8}'),
+    # websites
+    re.compile(f'{website}|{formal_website}'),
 ]
 
 
