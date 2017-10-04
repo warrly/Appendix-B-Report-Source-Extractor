@@ -8,7 +8,7 @@ import re
 
 
 website = '(?:http://)(?:www.)\S+\.com(?:/\S+[A-Za-z])'
-formal_website = f'(?:“.+,” .+, ){website}'
+formal_website = '(?:“.+,” .+, ){}'.format(website)
 
 
 PATTERNS = [
@@ -19,7 +19,7 @@ PATTERNS = [
     # Bates sources (EMAILS 12345678 or EMAILS12345678 or EMAILS 1234567 or EMAILS1234567)
     re.compile('[A-Z]+\s?[0-9]{7,8}'),
     # websites
-    re.compile(f'{website}|{formal_website}'),
+    re.compile('{}|{}'.format(website, formal_website)),
 ]
 
 
@@ -28,7 +28,7 @@ def sources_of(footnote: str) -> [str]:
     for pattern in PATTERNS:
         results = pattern.findall(footnote)
         for result in results:
-            sources.append(f'{result}.')
+            sources.append('{}.'.format(result))
     return sources
 
 
@@ -36,4 +36,4 @@ if __name__ == '__main__':
     for i, footnote in enumerate(fileinput.input()):
         sources = sources_of(footnote)
         for source in sources:
-            print(f'{i+1}\t{source}')
+            print('{}\t{}'.format(i + 1, source))
