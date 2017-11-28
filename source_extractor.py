@@ -35,7 +35,8 @@ def xml2text(xml):
             text += t_text if t_text is not None else ''
         elif child.tag == qn('w:tab'):
             text += '\t'
-        elif child.tag in (qn('w:br'), qn('w:cr'),qn("w:p")):
+        #elif child.tag in (qn('w:br'), qn('w:cr'),qn("w:p")):    
+        elif child.tag in (qn("w:footnote")):
             text += '\n'
     return text
 
